@@ -10,7 +10,7 @@ import com.gareth.service.IAccountNumberService;
 public class AccountNumberController {
 
 	@Autowired
-	IAccountNumberService service;
+	private IAccountNumberService service;
 
 	@RequestMapping("${URL.method}")
 	public String accountNumber() {

@@ -12,5 +12,4 @@ public class NumberGenerator {
 	public String generateAccountNumber() {
 		return RandomNumberGenerator().substring(4, 10);
 	}
-
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class LetterGenerator {
 
 	@Value("${letters}")
-	String letters;
+	private String letters;
 
 	public char generateLetter() {
 		char[] letterArray = letters.toCharArray();
