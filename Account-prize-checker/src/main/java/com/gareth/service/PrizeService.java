@@ -14,6 +14,5 @@ public class PrizeService implements IPrizeService {
 
 	public Prize getPrize(String accountNumber) {
 		return checker.checkPrize(accountNumber);
-
 	}
 }

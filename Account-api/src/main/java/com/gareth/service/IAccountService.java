@@ -3,6 +3,7 @@ package com.gareth.service;
 import java.util.Optional;
 
 import com.gareth.domain.Account;
+import com.gareth.domain.Prize;
 import com.gareth.repository.AccountRepository;
 
 public interface IAccountService {
@@ -14,7 +15,9 @@ public interface IAccountService {
 	Optional<Account> get(Long id);
 
 	Account add(Account account);
+	
+	Prize prizeCheck(String accountNumber);
 
 	void setRepo(AccountRepository accountRepo);
-
+	
 }

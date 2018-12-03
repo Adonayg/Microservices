@@ -15,7 +15,7 @@ public class AccountService implements IAccountService {
 
 	@Autowired
 	private AccountRepository accountRepo;
-	
+
 	@Autowired
 	private AccountRestTemplate apiCaller;
 
@@ -38,11 +38,11 @@ public class AccountService implements IAccountService {
 		return accountRepo.save(account);
 	}
 
-	public void setRepo(AccountRepository accountRepo) {
-		this.accountRepo = accountRepo;
-	}
-	
 	public Prize prizeCheck(String accountNumber) {
 		return apiCaller.getPrize(accountNumber);
+	}
+
+	public void setRepo(AccountRepository accountRepo) {
+		this.accountRepo = accountRepo;
 	}
 }
