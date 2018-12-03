@@ -24,10 +24,9 @@ public class PrizeChecker {
 	public Prize checkPrize(String accountNumber) {
 		String letter = accountNumber.substring(0, 1);
 		switch (letter) {
-		case "A":
-			System.out.println("${base.prize.letter}");
+		case PrizeConstants.basePrize:
 			return new Prize(winMessage + String.valueOf(basePrize), true);
-		case "B":
+		case PrizeConstants.multiplierPrize:
 			return new Prize(winMessage + String.valueOf(multiplier * basePrize), true);
 		default:
 			return new Prize(loseMessage, false);	
