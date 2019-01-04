@@ -13,12 +13,12 @@ public class Prize {
 		this.winner = winner;
 	}
 
-	public String getPrize() {
+	public String getMessage() {
 		return message;
 	}
 
-	public void setPrize(String prize) {
-		this.message = prize;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public boolean isWinner() {
