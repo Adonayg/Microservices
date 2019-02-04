@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.adonayg.domain.Account;
 import com.adonayg.domain.Prize;
 import com.adonayg.repository.AccountRepository;
+import com.adonayg.util.AccountProducer;
 import com.adonayg.util.AccountRestTemplate;
 
 @Service
@@ -18,6 +19,9 @@ public class AccountService implements IAccountService {
 
 	@Autowired
 	private AccountRestTemplate apiCaller;
+	
+	@Autowired
+	private AccountProducer producer;
 
 	public Iterable<Account> getAll() {
 		return accountRepo.findAll();
@@ -35,6 +39,7 @@ public class AccountService implements IAccountService {
 	public Account add(Account account) {
 		account.setAccountNumber(apiCaller.getAccountNumber());
 		account.setPrize(apiCaller.getPrize(account.getAccountNumber()));
+		producer.produce(account);
 		return accountRepo.save(account);
 	}
 
