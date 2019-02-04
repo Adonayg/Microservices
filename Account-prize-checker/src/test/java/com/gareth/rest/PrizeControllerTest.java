@@ -9,8 +9,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.gareth.domain.Prize;
-import com.gareth.service.PrizeService;
+import com.adonayg.domain.Prize;
+import com.adonayg.rest.PrizeController;
+import com.adonayg.service.PrizeService;
 import com.gareth.test.constants.TestConstants;
 
 public class PrizeControllerTest {

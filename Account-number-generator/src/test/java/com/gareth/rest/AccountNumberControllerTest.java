@@ -9,7 +9,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.gareth.service.AccountNumberService;
+import com.adonayg.rest.AccountNumberController;
+import com.adonayg.service.AccountNumberService;
 import com.gareth.test.constants.TestConstants;
 
 public class AccountNumberControllerTest {
