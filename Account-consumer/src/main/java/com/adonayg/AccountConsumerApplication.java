@@ -11,18 +11,12 @@ import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class AccountApiApplication {
+public class AccountConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccountApiApplication.class, args);
-	}
-	
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
+		SpringApplication.run(AccountConsumerApplication.class, args);
 	}
 	
 	@Bean
@@ -32,7 +26,7 @@ public class AccountApiApplication {
 		configurer.configure(factory, connectionFactory);
 		return factory;
 	}
-	
+
 	@Bean
 	public MessageConverter jacksonJmsMessageConverter() {
 		MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
